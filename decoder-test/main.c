@@ -106,7 +106,7 @@ void main(void)
     InitSystemTick();                       // Start a 1 ms counter
     Console_InitUART();                     // Initialise the UART connected to the Stellaris virtual COM port on the dev board
 
-    MSF_InitDecoder( &msf_DateTime );       // Initialise the decoder with a ptr to our struct and no callback function
+    MSF_InitDecoder( &msf_DateTime );       // Initialise the decoder with a ptr to our struct
     MSF_EnableRadio( true );                // Assert the radio enable pin & start decoding the signal
 
     Console_puts("Looping for date/time updates...");
@@ -119,7 +119,7 @@ void main(void)
         // Show some status info every second
         if ((g_msSysTick - msSecondTimer) >= 1000)
         {
-            printf("%d seconds, SYNC=%d\n", nSeconds++, MSF_GetSyncState() );
+            Console_printf("%d seconds, SYNC=%d\n", nSeconds++, MSF_GetSyncState() );
             msSecondTimer = g_msSysTick;
         }
 
