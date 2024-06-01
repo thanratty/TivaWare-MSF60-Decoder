@@ -18,8 +18,8 @@ The decoder itself is hardware agnostic and requires only edge triggered interru
 
 The repository contains two project folders:
 <table>
-<tr><td>MSF60decode</td><td>The actual decoder library</td></tr>
-<tr><td>decoder-test</td><td>An example using the library</td></tr>
+<tr><td>MSF60decode</td><td>The decoder library</td></tr>
+<tr><td>decoder-test</td><td>Example project using the library</td></tr>
 </table>
 
 

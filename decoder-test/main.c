@@ -94,6 +94,8 @@ char str[ 32 ];
 
 void main(void)
 {
+    char msg[ 64 ];
+
     uint32_t msSecondTimer = g_msSysTick;
     uint32_t nSeconds = 0;
 
@@ -119,7 +121,8 @@ void main(void)
         // Show some status info every second
         if ((g_msSysTick - msSecondTimer) >= 1000)
         {
-            Console_printf("%d seconds, SYNC=%d\n", nSeconds++, MSF_GetSyncState() );
+            snprintf(msg, 64, "%d seconds, SYNC=%d\n", nSeconds++, MSF_GetSyncState());
+            Console_puts(msg);
             msSecondTimer = g_msSysTick;
         }
 
