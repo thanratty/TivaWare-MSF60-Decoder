@@ -5,7 +5,7 @@
 
 A library and implementation example for decoding the UK MSF atomic clock signal broadcast on 60 kHz.
 
-The decoder itself is hardware agnostic and requires only edge triggered interrupts and a free-running millisecond timer counter. Although this particular implementation is targetted at a Texas Instruments TM4C microcontroller it should be easy to port to other platforms.
+The decoder itself is hardware agnostic and requires only edge triggered interrupts and a free-running millisecond timer counter. Although this particular implementation is targetted at the Texas Instruments TM4C microcontroller family it should be easy to port to other platforms.
 
 ### Build Environment
 
